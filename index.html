@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Wanderly</title>
+    <title>Wanderly | Discover India</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -13,243 +13,946 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Sekuya&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
+<body>
 
-<body id="home">
+    <!-- ================= HEADER ================= -->
 
+    <header class="header">
 
+        <div class="navbar">
 
-    <div class="navbar">
+            <a href="#" class="logo">Wanderly</a>
 
-        <div class="logo">
-            Wanderly
-        </div>
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
 
-        <div class="nav-link">
+                <a href="#discover">Discover</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#stays">Stays</a>
+                <a href="#experiences">Experiences</a>
 
-            <a href="#home">HOME</a>
+            </nav>
 
-            <a href="#destinations">DESTINATIONS</a>
+            <div class="nav-actions">
 
-            <a href="#stays">STAYS</a>
+                <button class="search-icon" aria-label="Search">
+                    🔍
+                </button>
 
-            <a href="#experiences">EXPERIENCES</a>
+                <a href="#" class="property-link">
+                    List your property
+                </a>
 
-            <input type="text" placeholder="Search 🔎">
-
-        </div>
-
-    </div>
-
-
-
-    <div class="hero">
-
-        <h1>Discover Your Next Adventure</h1>
-
-        <p>Explore the world with Wanderly</p>
-
-        <a href="#destinations" class="explore-btn">
-            Explore Destinations
-        </a>
-
-    </div>
-
-
-
-
-    <section class="destinations" id="destinations">
-
-        <h2>Popular Destinations</h2>
-
-        <div class="destination-cards">
-
-
-
-
-            <div class="card">
-
-                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Goa">
-
-                <h3>Goa</h3>
-
-                <p>
-                    Beautiful beaches and unforgettable sunsets.
-                </p>
+                <a href="#" class="sign-in">
+                    Sign In
+                </a>
 
             </div>
 
 
+            <!-- Mobile Hamburger -->
+
+            <input type="checkbox" id="menu-toggle">
+
+            <label for="menu-toggle" class="hamburger">
+                ☰
+            </label>
 
 
-            <div class="card">
+            <!-- Mobile Menu -->
 
-                <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7" alt="Kashmir">
+            <div class="mobile-menu">
 
-                <h3>Kashmir</h3>
+                <div class="mobile-menu-header">
 
-                <p>
-                    Snowy mountains and breathtaking valleys.
-                </p>
+                    <span class="mobile-logo">
+                        Wanderly
+                    </span>
+
+                    <label for="menu-toggle" class="close-menu">
+                        ✕
+                    </label>
+
+                </div>
+
+
+                <div class="mobile-search">
+
+                    <input
+                        type="text"
+                        placeholder="Search destinations..."
+                    >
+
+                    <button>
+                        🔍
+                    </button>
+
+                </div>
+
+
+                <nav class="mobile-nav">
+
+                    <a href="#discover">Discover</a>
+                    <a href="#destinations">Destinations</a>
+                    <a href="#stays">Stays</a>
+                    <a href="#experiences">Experiences</a>
+
+                    <a href="#" class="mobile-property">
+                        List your property
+                    </a>
+
+                    <a href="#" class="mobile-signin">
+                        Sign In
+                    </a>
+
+                </nav>
 
             </div>
-
-
-
-
-            <div class="card">
-
-                <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41" alt="Jaipur">
-
-                <h3>Jaipur</h3>
-
-                <p>
-                    Royal palaces and rich Rajasthani culture.
-                </p>
-
-            </div>
-
-
-
-
-            <div class="card">
-
-                <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944" alt="Kerala">
-
-                <h3>Kerala</h3>
-
-                <p>
-                    Peaceful backwaters and lush green landscapes.
-                </p>
-
-            </div>
-
 
         </div>
 
-    </section>
+    </header>
 
 
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero" id="discover">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="hero-small">
+                    YOUR JOURNEY STARTS HERE
+                </p>
+
+                <h1>
+                    Discover Incredible India
+                </h1>
+
+                <p class="hero-description">
+                    Explore beautiful destinations, unique stays,
+                    and unforgettable experiences across India.
+                </p>
 
 
-    <section class="stays" id="stays">
+                <!-- Search Module -->
 
-        <h2>Featured Stays</h2>
+                <div class="search-box">
 
-        <div class="stay-cards">
+                    <div class="search-field">
+
+                        <span class="field-icon">📍</span>
+
+                        <div>
+                            <small>Destination</small>
+                            <p>Where are you going?</p>
+                        </div>
+
+                    </div>
 
 
+                    <div class="search-field">
+
+                        <span class="field-icon">✈️</span>
+
+                        <div>
+                            <small>Trip type</small>
+                            <p>Any type</p>
+                        </div>
+
+                    </div>
 
 
-            <div class="stay-card">
+                    <div class="search-field">
 
-                <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5" alt="Goa Resort">
+                        <span class="field-icon">📅</span>
 
-                <h3>Beach Resort</h3>
+                        <div>
+                            <small>Dates</small>
+                            <p>Add dates</p>
+                        </div>
 
-                <p>Goa ⭐ 4.9</p>
+                    </div>
 
-                <p>₹8,500 / night</p>
+
+                    <div class="search-field">
+
+                        <span class="field-icon">👤</span>
+
+                        <div>
+                            <small>Guests</small>
+                            <p>2 guests</p>
+                        </div>
+
+                    </div>
+
+
+                    <button class="search-button">
+                        Search
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATS ================= -->
+
+        <section class="stats">
+
+            <div class="stat">
+                <strong>100+</strong>
+                <span>Destinations</span>
+            </div>
+
+            <div class="stat">
+                <strong>5,000+</strong>
+                <span>Places to stay</span>
+            </div>
+
+            <div class="stat">
+                <strong>10,000+</strong>
+                <span>Experiences</span>
+            </div>
+
+            <div class="stat">
+                <strong>4.8/5</strong>
+                <span>Average rating</span>
+            </div>
+
+        </section>
+
+
+        <!-- ================= POPULAR DESTINATIONS ================= -->
+
+        <section class="destinations section" id="destinations">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        EXPLORE INDIA
+                    </p>
+
+                    <h2>
+                        Popular Destinations
+                    </h2>
+
+                </div>
+
+                <a href="#" class="view-link">
+                    View all destinations →
+                </a>
 
             </div>
 
 
+            <div class="destination-cards">
 
 
-            <div class="stay-card">
+                <!-- GOA -->
 
-                <img src="https://rukmini-ct.flixcart.com/w_2048,f_auto,q_auto/ct-hotel-images/places/hotels/cms/2047/2047360/images/image_2047360_3c4ea344-da69-49e6-a056-bbcd17fe986d_proc.jpeg"
-                    alt="Manali Hotel">
+                <article class="destination-card">
 
-                <h3>Mountain Retreat</h3>
+                    <img
+                        src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=80"
+                        alt="Goa beach"
+                    >
 
-                <p>Manali ⭐ 4.8</p>
+                    <div class="card-content">
 
-                <p>₹6,500 / night</p>
+                        <div class="card-top">
+
+                            <div>
+
+                                <h3>Goa</h3>
+
+                                <span>
+                                    India
+                                </span>
+
+                            </div>
+
+                            <span class="rating">
+                                4.7 ★
+                            </span>
+
+                        </div>
+
+
+                        <p>
+                            Golden beaches, vibrant nightlife,
+                            and unforgettable sunsets.
+                        </p>
+
+
+                        <div class="card-bottom">
+
+                            <strong>
+                                From ₹12,000
+                            </strong>
+
+                            <a href="#">
+                                →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- KASHMIR -->
+
+                <article class="destination-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=900&q=80"
+                        alt="Kashmir mountains"
+                    >
+
+                    <div class="card-content">
+
+                        <div class="card-top">
+
+                            <div>
+
+                                <h3>Kashmir</h3>
+
+                                <span>
+                                    India
+                                </span>
+
+                            </div>
+
+                            <span class="rating">
+                                4.8 ★
+                            </span>
+
+                        </div>
+
+
+                        <p>
+                            Snow-covered mountains, peaceful lakes,
+                            and beautiful valleys.
+                        </p>
+
+
+                        <div class="card-bottom">
+
+                            <strong>
+                                From ₹15,000
+                            </strong>
+
+                            <a href="#">
+                                →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- KERALA -->
+
+                <article class="destination-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=900&q=80"
+                        alt="Kerala backwaters"
+                    >
+
+                    <div class="card-content">
+
+                        <div class="card-top">
+
+                            <div>
+
+                                <h3>Kerala</h3>
+
+                                <span>
+                                    India
+                                </span>
+
+                            </div>
+
+                            <span class="rating">
+                                4.9 ★
+                            </span>
+
+                        </div>
+
+
+                        <p>
+                            Serene backwaters, lush greenery,
+                            and peaceful escapes.
+                        </p>
+
+
+                        <div class="card-bottom">
+
+                            <strong>
+                                From ₹10,000
+                            </strong>
+
+                            <a href="#">
+                                →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- RAJASTHAN -->
+
+                <article class="destination-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=900&q=80"
+                        alt="Rajasthan palace"
+                    >
+
+                    <div class="card-content">
+
+                        <div class="card-top">
+
+                            <div>
+
+                                <h3>Rajasthan</h3>
+
+                                <span>
+                                    India
+                                </span>
+
+                            </div>
+
+                            <span class="rating">
+                                4.8 ★
+                            </span>
+
+                        </div>
+
+
+                        <p>
+                            Royal palaces, colourful markets,
+                            and rich cultural heritage.
+                        </p>
+
+
+                        <div class="card-bottom">
+
+                            <strong>
+                                From ₹9,000
+                            </strong>
+
+                            <a href="#">
+                                →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= WHY WANDERLY ================= -->
+
+        <section class="why-wanderly section">
+
+            <div class="section-heading centered">
+
+                <p class="eyebrow">
+                    WHY WANDERLY
+                </p>
+
+                <h2>
+                    Travel better with Wanderly
+                </h2>
+
+                <p>
+                    Everything you need to plan a memorable
+                    Indian getaway, all in one place.
+                </p>
 
             </div>
 
 
+            <div class="feature-cards">
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        🌍
+                    </div>
+
+                    <h3>
+                        Curated destinations
+                    </h3>
+
+                    <p>
+                        Discover handpicked places across India
+                        worth adding to your travel list.
+                    </p>
+
+                </article>
 
 
-            <div class="stay-card">
+                <article class="feature-card">
 
-                <img src="https://assets.architecturaldigest.in/photos/600838c57a5614cb87e4a051/16:9/w_2560%2Cc_limit/Umaid-Bhawan-1366x768.jpg"
-                    alt="Jaipur Palace">
+                    <div class="feature-icon">
+                        🏡
+                    </div>
 
-                <h3>Royal Palace Stay</h3>
+                    <h3>
+                        Unique stays
+                    </h3>
 
-                <p>Jaipur ⭐ 4.7</p>
+                    <p>
+                        Find beautiful hotels, resorts, villas,
+                        and homestays wherever you go.
+                    </p>
 
-                <p>₹7,200 / night</p>
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        ⭐
+                    </div>
+
+                    <h3>
+                        Trusted reviews
+                    </h3>
+
+                    <p>
+                        Make better decisions with ratings
+                        and reviews from fellow travellers.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        💚
+                    </div>
+
+                    <h3>
+                        Easy planning
+                    </h3>
+
+                    <p>
+                        Plan your Indian adventure simply
+                        and confidently with Wanderly.
+                    </p>
+
+                </article>
 
             </div>
 
+        </section>
+
+
+        <!-- ================= FEATURED OFFERS ================= -->
+
+        <section class="offers section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        DON'T MISS OUT
+                    </p>
+
+                    <h2>
+                        Featured Offers
+                    </h2>
+
+                </div>
+
+                <a href="#" class="view-link">
+                    View all offers →
+                </a>
+
+            </div>
+
+
+            <div class="offer-cards">
+
+
+                <!-- GOA OFFER -->
+
+                <article class="offer-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1000&q=80"
+                        alt="Goa vacation"
+                    >
+
+                    <div class="offer-content">
+
+                        <span class="offer-tag">
+                            LIMITED OFFER
+                        </span>
+
+                        <h3>
+                            Goa Beach Escape
+                        </h3>
+
+                        <p>
+                            Save up to 25% on selected
+                            Goa stays and experiences.
+                        </p>
+
+                        <a href="#">
+                            Explore offer →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MANALI OFFER -->
+
+                <article class="offer-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1000&q=80"
+                        alt="Mountain getaway"
+                    >
+
+                    <div class="offer-content">
+
+                        <span class="offer-tag">
+                            WEEKEND GETAWAY
+                        </span>
+
+                        <h3>
+                            Escape to the Mountains
+                        </h3>
+
+                        <p>
+                            Discover peaceful Himalayan escapes
+                            starting from ₹6,999.
+                        </p>
+
+                        <a href="#">
+                            Explore offer →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TESTIMONIALS ================= -->
+
+        <section class="testimonials section">
+
+            <div class="section-heading centered">
+
+                <p class="eyebrow">
+                    TRAVELLER STORIES
+                </p>
+
+                <h2>
+                    Loved by travellers
+                </h2>
+
+            </div>
+
+
+            <div class="testimonial-cards">
+
+
+                <article class="testimonial">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        “Wanderly made planning our Goa trip
+                        incredibly easy. Everything was in one
+                        place and the recommendations were amazing.”
+                    </p>
+
+                    <div class="person">
+
+                        <div class="person-avatar">
+                            A
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Ananya
+                            </strong>
+
+                            <span>
+                                Mumbai, India
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="testimonial">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        “I found the perfect stay in Kashmir
+                        through Wanderly. The whole experience
+                        was simple and stress-free.”
+                    </p>
+
+                    <div class="person">
+
+                        <div class="person-avatar">
+                            R
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Rahul
+                            </strong>
+
+                            <span>
+                                Delhi, India
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="testimonial">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        “The destination cards and reviews helped
+                        us discover places in Kerala we would never
+                        have found on our own.”
+                    </p>
+
+                    <div class="person">
+
+                        <div class="person-avatar">
+                            S
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Sneha
+                            </strong>
+
+                            <span>
+                                Bengaluru, India
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= NEWSLETTER ================= -->
+
+        <section class="newsletter">
+
+            <div class="newsletter-content">
+
+                <p class="eyebrow">
+                    STAY INSPIRED
+                </p>
+
+                <h2>
+                    Get Indian travel inspiration in your inbox
+                </h2>
+
+                <p>
+                    Sign up for destination ideas, exclusive
+                    offers, and travel tips.
+                </p>
+
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email address"
+                        required
+                    >
+
+                    <button type="submit">
+                        Subscribe
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+
+            <div class="footer-brand">
+
+                <a href="#" class="footer-logo">
+                    Wanderly
+                </a>
+
+                <p>
+                    Discover places you'll love.
+                    Create memories you'll never forget.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Explore
+                </h4>
+
+                <a href="#destinations">
+                    Destinations
+                </a>
+
+                <a href="#stays">
+                    Stays
+                </a>
+
+                <a href="#experiences">
+                    Experiences
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Wanderly
+                </h4>
+
+                <a href="#">
+                    About us
+                </a>
+
+                <a href="#">
+                    Contact
+                </a>
+
+                <a href="#">
+                    List your property
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Follow us
+                </h4>
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+                <a href="#">
+                    Pinterest
+                </a>
+
+            </div>
 
         </div>
 
-    </section>
 
+        <div class="footer-bottom">
 
-    <section class="experiences" id="experiences">
+            <p>
+                © 2026 Wanderly. All rights reserved.
+            </p>
 
-        <h2>Travel Experiences</h2>
+            <div>
 
-        <div class="experience-cards">
+                <a href="#">
+                    Privacy
+                </a>
 
-
-
-
-            <div class="experience-card">
-
-                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b" alt="Manali Trekking">
-
-                <h3>Trekking in Manali</h3>
-
-                <p>
-                    Explore beautiful Himalayan trails and breathtaking
-                    mountain views.
-                </p>
+                <a href="#">
+                    Terms
+                </a>
 
             </div>
-
-
-
-
-            <div class="experience-card">
-
-                <img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c" alt="Goa Scuba Diving">
-
-                <h3>Scuba Diving in Goa</h3>
-
-                <p>
-                    Discover colorful marine life beneath the Arabian Sea.
-                </p>
-
-            </div>
-
-
-
-
-            <div class="experience-card">
-
-                <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944" alt="Kerala Backwaters">
-
-                <h3>Backwater Cruise in Kerala</h3>
-
-                <p>
-                    Relax on a peaceful houseboat surrounded by lush greenery.
-                </p>
-
-            </div>
-
 
         </div>
 
-    </section>
-
+    </footer>
 
 </body>
 
