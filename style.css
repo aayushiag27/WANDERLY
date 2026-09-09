@@ -1,4 +1,3 @@
-/* Prevent horizontal scrolling */
 
 * {
     margin: 0;
@@ -59,7 +58,7 @@ body {
 
 .hamburger {
     display: none;
-    font-size: 25px;
+    font-size: 28px;
     cursor: pointer;
 }
 
@@ -140,7 +139,7 @@ body {
     margin-bottom: 15px;
 }
 
-.destinations > p {
+.destinations p {
     font-size: 16px;
     color: grey;
     margin-bottom: 25px;
@@ -357,9 +356,16 @@ body {
 .mobile-menu.active {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
     background: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
     padding: 30px;
+    z-index: 1000;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .mobile-menu a {
@@ -371,9 +377,11 @@ body {
 .close {
     cursor: pointer;
     font-size: 25px;
+    align-self: flex-end;
 }
 
 @media (max-width: 768px) {
+
     .navbar {
         padding: 15px 20px;
     }
@@ -444,12 +452,7 @@ body {
         gap: 25px;
     }
 
-    .card {
-        width: 100%;
-    }
-
     .card img {
-        width: 100%;
         height: 220px;
     }
 
