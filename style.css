@@ -81,7 +81,7 @@ border: none;;
     margin: 10px 0;
 }
 
-.hero p {
+.hero span {
     font-size: 18px;
     max-width: 650px;
     margin: 0 auto;
@@ -92,14 +92,12 @@ border: none;;
 
 .search-box {
     display: flex;
-    
-   
-    background: #FFFFFF;
+ background: #FFFFFF;
     color: black;
     padding: 15px 20px;
     margin: 35px auto 0;
     border-radius: 8px;
-    width: min(700px, 90%);
+   
 
 }
 
@@ -109,13 +107,14 @@ border: none;;
 }
 
 .search-box button {
-    background: orange;
-    color: white;
-    border: none;
-    padding: 15px 25px;
+    background: #D4AF37;
+   
+  width: 200px;
+    height: 35px;
     border-radius: 5px;
-    cursor: pointer;
 }
+
+
 
 .stats {
     display: flex;
