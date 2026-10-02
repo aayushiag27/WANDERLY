@@ -1,0 +1,303 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 40px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 50px;
+}
+
+.nav-links a,
+.nav-right a {
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-right button {
+    padding: 8px 15px;
+    border: 1px solid #333;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-right button:hover {
+    background: #333;
+    color: white;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.hero {
+    background-image: url("https://plus.unsplash.com/premium_photo-1687239968372-eb409d88b411?fm=jpg&q=60&w=3000&auto=format&fit=crop");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.hero-content h1,
+.hero h1 {
+    font-size: 42px;
+    color: white;
+    margin: 10px 0;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto;
+    color: white;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    color: black;
+    padding: 15px 20px;
+    margin: 35px auto 0;
+    border-radius: 8px;
+    width: min(700px, 90%);
+}
+
+.search-box div {
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+.search-box button {
+    background: orange;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #e69500;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background: #e3d9e3;
+    padding: 8px 20px;
+    text-align: center;
+}
+
+.stats h3 {
+    font-size: 22px;
+    color: #000;
+}
+
+.stats p {
+    font-size: 13px;
+    color: grey;
+}
+
+.destinations {
+    text-align: center;
+    padding: 20px;
+}
+
+.destinations h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.destinations p {
+    font-size: 16px;
+    color: grey;
+    margin-bottom: 25px;
+}
+
+.destination-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 300px));
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover img {
+    transform: scale(1.03);
+}
+
+.card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 14px;
+    color: grey;
+}
+
+.favorite {
+    background: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: grey;
+}
+
+.favorite:hover {
+    color: red;
+}
+
+.why {
+    padding: 50px 20px;
+    text-align: center;
+    background: rgb(232, 231, 217);
+}
+
+.why h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.features > div {
+    max-width: 300px;
+}
+
+.features span {
+    font-size: 40px;
+    color: grey;
+}
+
+.offers {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+}
+
+.offer-card {
+    flex: 1;
+    max-width: 500px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+}
+
+.offer-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.offer-text {
+    padding: 15px;
+}
+
+.offer-text h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.offer-text button {
+    background: orange;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.offer-text button:hover {
+    background: #e69500;
+}
+
+.testimonials {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.reviews {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.review {
+    width: 280px;
+    padding: 25px;
+    backgr
+```
