@@ -50,10 +50,13 @@ body {
 
 .nav-right button {
     padding: 8px 15px;
-    border: 1px solid #333;
-    background: white;
-    border-radius: 5px;
+border: none;;
+    background:#D4AF37;
+    border-radius: 20px;
     cursor: pointer;
+}
+.nav-right span{
+    font-size: 30px;
 }
 
 .hamburger {
@@ -89,14 +92,15 @@ body {
 
 .search-box {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: white;
+    
+   
+    background: #FFFFFF;
     color: black;
     padding: 15px 20px;
     margin: 35px auto 0;
     border-radius: 8px;
     width: min(700px, 90%);
+
 }
 
 .search-box div {
@@ -116,7 +120,7 @@ body {
 .stats {
     display: flex;
     justify-content: space-around;
-    background: #e3d9e3;
+    background: #FDFBF7;
     padding: 8px 20px;
     text-align: center;
 }
@@ -139,12 +143,14 @@ body {
 .destinations h2 {
     font-size: 30px;
     margin-bottom: 15px;
+    text-align: left;
 }
 
 .destinations p {
     font-size: 16px;
     color: grey;
     margin-bottom: 25px;
+    text-align: left;
 }
 
 .destination-cards {
@@ -283,7 +289,7 @@ body {
 }
 .newsletter p{
     color: #FFFFFF;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 
 .newsletter input {
@@ -302,7 +308,7 @@ body {
 }
 
 .footer {
-    background: #cab77b;
+    background: #C6C6CD33;
     padding: 40px 60px 20px;
     color: #333;
     margin-top: 50px;
@@ -518,4 +524,8 @@ body {
         flex-wrap: wrap;
         gap: 30px;
     }
+}
+.app-buttons{
+    color:#FFFFFF;
+    background-color: #1A362D;
 }
