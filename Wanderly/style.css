@@ -1,4 +1,3 @@
-```css
 * {
     margin: 0;
     padding: 0;
@@ -76,17 +75,14 @@ body {
     text-align: center;
 }
 
-.hero-content h1,
-.hero h1 {
+.hero-content h1 {
     font-size: 42px;
     color: white;
     margin: 10px 0;
 }
 
-.hero p {
+.hero-content p {
     font-size: 18px;
-    max-width: 650px;
-    margin: 0 auto;
     color: white;
 }
 
@@ -99,12 +95,24 @@ body {
     padding: 15px 20px;
     margin: 35px auto 0;
     border-radius: 8px;
-    width: min(700px, 90%);
+    width: min(900px, 90%);
+    gap: 10px;
 }
 
 .search-box div {
-    padding: 10px 20px;
-    white-space: nowrap;
+    padding: 8px 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-box strong {
+    font-size: 11px;
+}
+
+.search-box span {
+    color: grey;
+    font-size: 13px;
 }
 
 .search-box button {
@@ -124,7 +132,7 @@ body {
     display: flex;
     justify-content: space-around;
     background: #e3d9e3;
-    padding: 8px 20px;
+    padding: 15px 20px;
     text-align: center;
 }
 
@@ -140,31 +148,32 @@ body {
 
 .destinations {
     text-align: center;
-    padding: 20px;
+    padding: 60px 20px;
 }
 
 .destinations h2 {
     font-size: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-.destinations p {
+.destinations > p {
     font-size: 16px;
     color: grey;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
 }
 
 .destination-cards {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 300px));
-    gap: 30px;
+    gap: 35px;
     justify-content: center;
 }
 
 .card {
     width: 100%;
-    text-align: center;
+    text-align: left;
     transition: 0.3s;
+    position: relative;
 }
 
 .card:hover {
@@ -176,44 +185,54 @@ body {
     height: 180px;
     object-fit: cover;
     border-radius: 15px;
-    transition: 0.3s;
 }
 
-.card:hover img {
-    transform: scale(1.03);
+.card .rating {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
 }
 
 .card h3 {
     font-size: 20px;
-    margin: 10px 0;
+    margin: 5px 0;
+}
+
+.card h4 {
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 3px;
 }
 
 .card p {
     font-size: 14px;
     color: grey;
+    margin-bottom: 5px;
 }
 
-.favorite {
-    background: white;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
+.card > span:last-child {
+    font-size: 14px;
     color: grey;
 }
 
-.favorite:hover {
-    color: red;
+.view-all {
+    margin-top: 35px;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .why {
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
     background: rgb(232, 231, 217);
 }
 
 .why h2 {
     font-size: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .features {
@@ -235,7 +254,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 30px;
-    padding: 50px 20px;
+    padding: 60px 20px;
 }
 
 .offer-card {
@@ -254,17 +273,17 @@ body {
 
 .offer-card img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
 }
 
 .offer-text {
-    padding: 15px;
+    padding: 20px;
 }
 
 .offer-text h2 {
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .offer-text button {
@@ -274,10 +293,6 @@ body {
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.offer-text button:hover {
-    background: #e69500;
 }
 
 .testimonials {
@@ -299,5 +314,266 @@ body {
 .review {
     width: 280px;
     padding: 25px;
-    backgr
-```
+    background: #f5f2f5;
+    border-radius: 12px;
+}
+
+.review > span {
+    color: #333;
+    letter-spacing: 3px;
+}
+
+.review p {
+    color: #555;
+    margin: 15px 0;
+}
+
+.review h3 {
+    margin-top: 15px;
+}
+
+.newsletter {
+    padding: 60px 20px;
+    text-align: center;
+    background: #d610d6;
+}
+
+.newsletter h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+   
+}
+
+.newsletter p {
+    max-width: 650px;
+    margin: 0 auto 20px;
+    color: #844343;
+}
+
+.newsletter input {
+    padding: 12px;
+    width: 280px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    padding: 12px 20px;
+    border: none;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer {
+    background: #222;
+    color: white;
+    padding: 50px 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.footer-brand {
+    max-width: 300px;
+}
+
+.footer-brand h2 {
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    color: #bbb;
+}
+
+.footer-links {
+    display: flex;
+    gap: 60px;
+}
+
+.footer-links div {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links h4 {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    margin-bottom: 7px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.app-buttons span {
+    border: 1px solid #777;
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 9px;
+}
+
+.app-buttons strong {
+    font-size: 13px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #555;
+    margin-top: 35px;
+    padding-top: 20px;
+    text-align: center;
+    color: #aaa;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+#topBtn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border: none;
+    background: #333;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+
+    .nav-links,
+    .nav-right {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .destination-cards {
+        grid-template-columns: repeat(2, minmax(0, 300px));
+    }
+
+    .features {
+        flex-wrap: wrap;
+    }
+
+    .reviews {
+        flex-wrap: wrap;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .hero {
+        padding: 70px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .search-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box div {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .destination-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .offers {
+        flex-direction: column;
+    }
+
+    .reviews {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .newsletter input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .newsletter button {
+        width: 100%;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        padding: 70px 30px;
+        gap: 25px;
+        transition: 0.3s;
+        z-index: 1000;
+    }
+
+    .mobile-menu.active {
+        right: 0;
+    }
+
+    .mobile-menu a {
+        color: #333;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
