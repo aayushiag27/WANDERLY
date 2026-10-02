@@ -9,168 +9,262 @@
 </head>
 
 <body>
+
     <header>
         <nav class="navbar">
             <a href="#" class="logo">Wanderly</a>
+
             <div class="nav-links">
                 <a href="#">Discover</a>
                 <a href="#">Destinations</a>
                 <a href="#">Stays</a>
                 <a href="#">Experiences</a>
             </div>
+
             <div class="nav-right">
                 <span>⌕</span>
                 <a href="#">List your property</a>
                 <button>Sign In</button>
             </div>
+
             <div class="hamburger">☰</div>
         </nav>
+
         <section class="hero">
             <div class="hero-content">
                 <p>Trusted by 50,000+ travelers</p>
                 <h1>Discover the Extraordinary</h1>
-                <p>Find unforgettable destinations and experiences for your next adventure.</p>
+                <p>Curated journeys for the sophisticated explorer</p>
             </div>
+
             <div class="search-box">
-                <div>📍 Destination</div>
-                <div>✈️ Trip Type</div>
-                <div>📅 Dates</div>
-                <div>👥 Guests</div>
-                <button>Search</button>
+                <div>
+                    <strong>DESTINATION</strong>
+                    <span>Where are you going?</span>
+                </div>
+
+                <div>
+                    <strong>TRIP TYPE</strong>
+                    <span>Select type</span>
+                </div>
+
+                <div>
+                    <strong>DATES</strong>
+                    <span>Add dates</span>
+                </div>
+
+                <div>
+                    <strong>GUESTS</strong>
+                    <span>Add guests</span>
+                </div>
+
+                <button id="searchBtn">Search</button>
             </div>
         </section>
+
         <section class="stats">
             <div>
-                <h3>150k+</h3>
+                <h3>150+</h3>
                 <p>Destinations</p>
             </div>
+
             <div>
                 <h3>4.9</h3>
                 <p>Average Rating</p>
             </div>
+
             <div>
                 <h3>24/7</h3>
                 <p>Support</p>
             </div>
+
             <div>
                 <h3>50K+</h3>
                 <p>Happy Travelers</p>
             </div>
         </section>
     </header>
+
+
     <section class="destinations">
         <h2>Popular Destinations</h2>
-        <p>Discover beautiful places across India</p>
+        <p>Curated locations for the sophisticated explorer</p>
+
         <div class="destination-cards">
+
             <div class="card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtaw1XNBOQDsK9d5XiR70tkavWflAnDbCR-EHBmB6rAxfA9qEjXUb9_86Y&s=10"
-                    alt="Manali">
-                <h3>Manali</h3>
-                <p>⭐ 4.8 · From ₹4,000/night</p>
+                <img src="card1.jpg" alt="Amalfi Coast">
+                <span class="rating">4.9</span>
+                <h3>Amalfi Coast</h3>
+                <h4>From $1,500</h4>
+                <p>Italy</p>
+                <span>Experience the dramatic coastline, pastel-colored villages, and lemon groves of southern Italy.</span>
             </div>
+
             <div class="card">
-                <img src="https://titosgoa.com/api/uploads/1768282500728-why-tourists-visit-goa.png" alt="Goa">
-                <h3>Goa</h3>
-                <p>⭐ 4.9 · From ₹5,000/night</p>
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?fm=jpg&q=80&w=1200" alt="Kyoto">
+                <span class="rating">4.8</span>
+                <h3>Kyoto</h3>
+                <h4>From $1,200</h4>
+                <p>Japan</p>
+                <span>Discover ancient temples, traditional tea houses, and tranquil bamboo forests.</span>
             </div>
+
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a2VyYWxhJTIwdG91cmlzbXxlbnwwfHwwfHx8MA%3D%3D"
-                    alt="Kerala">
-                <h3>Kerala</h3>
-                <p>⭐ 4.7 · From ₹4,500/night</p>
+                <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?fm=jpg&q=80&w=1200" alt="Swiss Alps">
+                <span class="rating">4.9</span>
+                <h3>Swiss Alps</h3>
+                <h4>From $2,100</h4>
+                <p>Switzerland</p>
+                <span>Immerse yourself in breathtaking alpine scenery and luxury winter retreats.</span>
             </div>
+
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a2FzaG1pciUyMG1vdW50YWluc3xlbnwwfHwwfHx8MA%3D%3D"
-                    alt="Kashmir">
-                <h3>Kashmir</h3>
-                <p>⭐ 4.9 · From ₹6,000/night</p>
+                <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?fm=jpg&q=80&w=1200" alt="Santorini">
+                <span class="rating">4.7</span>
+                <h3>Santorini</h3>
+                <h4>From $1,400</h4>
+                <p>Greece</p>
+                <span>Iconic whitewashed buildings overlooking the deep blue Aegean sea.</span>
             </div>
+
             <div class="card">
-                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/jal-mahal-jaipur-rajasthan-1-attr-hero?qlt=82&ts=1742162446740"
-                    alt="Jaipur">
-                <h3>Jaipur</h3>
-                <p>⭐ 4.6 · From ₹3,500/night</p>
+                <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?fm=jpg&q=80&w=1200" alt="Bali">
+                <span class="rating">4.8</span>
+                <h3>Bali</h3>
+                <h4>From $950</h4>
+                <p>Indonesia</p>
+                <span>Lush jungles, vibrant culture, and serene wellness retreats.</span>
             </div>
+
             <div class="card">
-                <img src="https://sevensandstourism.com/wp-content/uploads/2025/09/desktop-wallpaper-andaman-nicobar-islands-andaman-and-nicobar-islands.jpg"
-                    alt="Andaman">
-                <h3>Andaman</h3>
-                <p>⭐ 4.8 · From ₹7,000/night</p>
+                <img src="https://images.unsplash.com/photo-1478827387698-1527781a4887?fm=jpg&q=80&w=1200" alt="Patagonia">
+                <span class="rating">4.9</span>
+                <h3>Patagonia</h3>
+                <h4>From $2,400</h4>
+                <p>Chile</p>
+                <span>Untamed wilderness, dramatic glaciers, and awe-inspiring landscapes.</span>
             </div>
+
         </div>
+
+        <button class="view-all">View all destinations</button>
     </section>
+
+
     <section class="why">
         <h2>Why Wanderly</h2>
+
         <div class="features">
+
             <div>
                 <span>☆</span>
                 <h3>Curated Experiences</h3>
                 <p>Hand-picked stays and exclusive access to the world's most remarkable destinations.</p>
             </div>
+
             <div>
                 <span>🗺️</span>
                 <h3>Local Expertise</h3>
                 <p>Insider knowledge and on-the-ground guides for authentic, unforgettable journeys.</p>
             </div>
+
             <div>
                 <span>▣</span>
                 <h3>Flexible Booking</h3>
                 <p>Travel with peace of mind featuring free cancellation on most of our premium properties.</p>
             </div>
+
         </div>
     </section>
+
+
     <section class="offers">
+
         <div class="offer-card">
             <img src="https://static.vecteezy.com/system/resources/thumbnails/015/178/103/small/wonderful-scenery-tropical-island-beach-perfect-summer-landscape-exotic-coast-coconut-trees-and-blue-sea-blue-sky-beautiful-outdoor-background-summer-vacation-beach-holiday-with-copy-space-photo.jpg"
                 alt="Summer Escape">
+
             <div class="offer-text">
                 <h2>Summer Escape: Luxury in the Aegean</h2>
                 <button>Explore Collection</button>
             </div>
         </div>
+
         <div class="offer-card">
             <img src="https://t4.ftcdn.net/jpg/00/64/81/97/360_F_64819783_bO18d6WGTEmDreGV8kHJd1uQ0w7ALl9n.jpg"
                 alt="Winter Retreat">
+
             <div class="offer-text">
                 <h2>Winter Retreat: Alpine Serenity</h2>
                 <button>Explore Collection</button>
             </div>
         </div>
+
     </section>
+
+
     <section class="testimonials">
         <h2>What Explorers Say</h2>
+
         <div class="reviews">
+
             <div class="review">
-                <p>"Wanderly made planning my trip so easy. Everything was perfect!"</p>
-                <h3>Priya Sharma</h3>
-                <span>⭐⭐⭐⭐⭐</span>
+                <span>★★★★★</span>
+                <p>"Our honeymoon in the Amalfi coast was flawlessly executed. The villa selection was breathtaking and the local concierge anticipated every need."</p>
+                <h3>Marcus Chen</h3>
+                <p>Traveled to Japan</p>
             </div>
+
             <div class="review">
-                <p>"Amazing destinations and a very smooth booking experience."</p>
-                <h3>Rahul Verma</h3>
-                <span>⭐⭐⭐⭐⭐</span>
+                <span>★★★★★</span>
+                <p>"Wanderly's access to private ryokans in Kyoto gave us an authentic experience we couldn't have booked on our own. Truly exceptional service."</p>
+                <h3>Elena Rodriguez</h3>
+                <p>Traveled to Switzerland</p>
             </div>
+
             <div class="review">
-                <p>"I discovered places I never knew existed. Highly recommended!"</p>
-                <h3>Ananya Gupta</h3>
-                <span>⭐⭐⭐⭐⭐</span>
+                <span>★★★★★</span>
+                <p>"The Swiss Alps chalet exceeded all expectations. Waking up to those mountain views with a private chef was the highlight of our year."</p>
+                <h3>Sarah Jenkins</h3>
+                <p>Traveled to Italy</p>
             </div>
+
         </div>
     </section>
+
+
     <section class="newsletter">
-        <h2>NEVER MISS A DESTINATION</h2>
-        <p>Subscribe to our newsletter for the latest travel tips and exclusive offers.</p>
-        <input type="email" id="email" placeholder="Enter your email">
+        <h2>Never miss a destination</h2>
+
+        <p>
+            Sign up for our newsletter to receive exclusive travel inspiration,
+            early access to new properties, and curated itineraries.
+        </p>
+
+        <input type="email" id="email" placeholder="Your email address">
         <button id="subscribe">Subscribe</button>
+
         <p id="message"></p>
     </section>
+
+
     <footer class="footer">
+
         <div class="footer-content">
+
             <div class="footer-brand">
                 <h2>Wanderly</h2>
                 <p>Curating the world's most extraordinary stays for the discerning traveler.</p>
+
+                <div class="app-buttons">
+                    <span>Download on the<br><strong>App Store</strong></span>
+                    <span>GET IT ON<br><strong>Google Play</strong></span>
+                </div>
             </div>
+
             <div class="footer-links">
+
                 <div>
                     <h4>Explore</h4>
                     <a href="#">Destinations</a>
@@ -178,6 +272,7 @@
                     <a href="#">Experiences</a>
                     <a href="#">Travel Guide</a>
                 </div>
+
                 <div>
                     <h4>Company</h4>
                     <a href="#">About Us</a>
@@ -185,13 +280,15 @@
                     <a href="#">Press</a>
                     <a href="#">Blog</a>
                 </div>
+
                 <div>
                     <h4>Support</h4>
                     <a href="#">Help Center</a>
                     <a href="#">Contact Us</a>
                     <a href="#">Cancellation</a>
-                    <a href="#">Options</a>
+                    <a href="#">Safety Information</a>
                 </div>
+
                 <div>
                     <h4>Links</h4>
                     <a href="#">Instagram</a>
@@ -199,21 +296,32 @@
                     <a href="#">Facebook</a>
                     <a href="#">Pinterest</a>
                 </div>
+
             </div>
+
         </div>
+
         <div class="footer-bottom">
             © 2026 Wanderly. All rights reserved.
         </div>
+
     </footer>
+
+
     <div class="mobile-menu">
         <span class="close">✕</span>
         <a href="#">Discover</a>
         <a href="#">Destinations</a>
         <a href="#">Stays</a>
         <a href="#">Experiences</a>
+        <a href="#">Search</a>
         <a href="#">Sign In</a>
     </div>
-    <script src="script.js"></script>
-</body>
 
+
+    <button id="topBtn">↑</button>
+
+    <script src="script.js"></script>
+
+</body>
 </html>
