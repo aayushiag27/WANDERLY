@@ -18,13 +18,13 @@ body {
     overflow-x: hidden;
 }
 
-/* Base Typography Headings */
+
 h1, h2, h3 {
     font-family: 'Playfair Display', Georgia, serif;
     font-weight: 600;
 }
 
-/* NAVBAR */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -94,7 +94,7 @@ h1, h2, h3 {
     color: #1A362D;
 }
 
-/* HERO SECTION */
+
 .hero {
     position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("bg.jpg") center/cover no-repeat;
@@ -119,11 +119,11 @@ h1, h2, h3 {
     font-size: 18px;
     max-width: 650px;
     margin: 0 auto;
-    color: #F3F4F6;
+    color: #C6C6CD;
     background: transparent;
 }
 
-/* SEARCH BOX */
+
 .search-box {
     display: flex;
     align-items: center;
@@ -184,7 +184,6 @@ h1, h2, h3 {
     background: #B38E46;
 }
 
-/* STATS SECTION */
 .stats {
     display: flex;
     justify-content: center;
@@ -193,12 +192,17 @@ h1, h2, h3 {
     padding: 30px 20px;
     text-align: center;
     border-bottom: 1px solid #EEEEEE;
+   
+    display: flex;
+    justify-content: space-around;
 }
+
 
 .stats h3 {
     font-size: 28px;
     color: #1A362D;
     margin-bottom: 2px;
+   
 }
 
 .stats p {
@@ -208,7 +212,7 @@ h1, h2, h3 {
     letter-spacing: 0.5px;
 }
 
-/* DESTINATIONS SECTION */
+
 .destinations {
     max-width: 1200px;
     margin: 0 auto;
@@ -316,7 +320,6 @@ h1, h2, h3 {
     line-height: 1.5;
 }
 
-/* WHY US SECTION */
 .why {
     padding: 80px 20px;
     text-align: center;
@@ -360,7 +363,7 @@ h1, h2, h3 {
     color: #666666;
 }
 
-/* OFFERS SECTION */
+
 .offers {
     display: flex;
     justify-content: center;
@@ -396,7 +399,7 @@ h1, h2, h3 {
     margin-bottom: 8px;
 }
 
-/* TESTIMONIALS SECTION */
+
 .testimonials {
     padding: 80px 20px;
     text-align: center;
@@ -439,7 +442,7 @@ h1, h2, h3 {
     font-size: 16px;
 }
 
-/* NEWSLETTER */
+
 .newsletter {
     background: #1A362D;
     padding: 80px 20px;
@@ -491,7 +494,6 @@ h1, h2, h3 {
     background: #B38E46;
 }
 
-/* FOOTER */
 .footer {
     background: #FFFFFF;
     padding: 60px 80px 30px;
@@ -558,7 +560,7 @@ h1, h2, h3 {
     text-align: center;
 }
 
-/* RESPONSIVE DESIGN */
+
 @media (max-width: 1024px) {
     .destination-cards {
         grid-template-columns: repeat(2, 1fr);
