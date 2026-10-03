@@ -302,38 +302,52 @@ h3 {
 .why h2 {
     color: #1A362D;
     font-size: 36px;
-    margin-bottom: 45px;
+    margin-bottom: 55px;
 }
 
 .features {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 55px;
 }
 
 .features > div {
-    max-width: 320px;
+    width: 300px;
+    padding: 35px 30px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .features span {
-    display: inline-block;
-    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    background: #F7F1E5;
     color: #C5A059;
-    margin-bottom: 15px;
+    font-size: 30px;
 }
 
 .features h3 {
     color: #1A362D;
+    font-size: 19px;
     margin-bottom: 10px;
 }
 
 .features p {
     color: #666666;
     font-size: 14px;
+    line-height: 1.6;
 }
-
-/* OFFERS */
-
 .offers {
     max-width: 1200px;
     margin: auto;
