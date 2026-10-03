@@ -171,22 +171,22 @@ h3 {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 30px 20px;
+    padding: 28px 60px;
     background: #F9F8F6;
     text-align: center;
 }
 
 .stats h3 {
     color: #1A362D;
-    font-size: 28px;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    margin-bottom: 2px;
 }
 
 .stats p {
     color: #666666;
-    font-size: 13px;
+    font-size: 12px;
 }
-
-/* DESTINATIONS */
 
 .destinations {
     max-width: 1200px;
