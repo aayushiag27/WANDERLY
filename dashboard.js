@@ -36,11 +36,30 @@ savedDestinations.forEach(function (destination) {
     card.classList.add("saved-card");
 
     card.innerHTML = `
-        <img src="${destinationImages[destination]}" alt="${destination}">
-        <h3>${destination}</h3>
-    `;
-
+    <img src="${destinationImages[destination]}" alt="${destination}">
+    <h3>${destination}</h3>
+    <button class="remove-btn">Remove</button>
+`;
     savedGrid.appendChild(card);
+    const removeBtn = card.querySelector(".remove-btn");
+
+removeBtn.addEventListener("click", function () {
+
+    let savedDestinations = JSON.parse(
+        localStorage.getItem("savedDestinations")
+    ) || [];
+
+    savedDestinations = savedDestinations.filter(function (item) {
+        return item !== destination;
+    });
+
+    localStorage.setItem(
+        "savedDestinations",
+        JSON.stringify(savedDestinations)
+    );
+
+    card.remove();
+});
 });
 
 if (savedDestinations.length === 0) {
