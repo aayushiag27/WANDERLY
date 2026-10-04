@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #2D3748;
+    background: #F9F8F6;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #1A362D;
+    text-decoration: none;
+}
+
+.dashboard-header nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.dashboard-header nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dashboard-header button {
+    padding: 9px 18px;
+    border: none;
+    border-radius: 20px;
+    background: #D4AF37;
+    color: #1A362D;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+main {
+    max-width: 1150px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.welcome {
+    padding: 55px;
+    border-radius: 20px;
+    background: #1A362D;
+    color: white;
+    margin-bottom: 55px;
+}
+
+.welcome > p {
+    color: #D4AF37;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.welcome h1 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.welcome > span {
+    color: #E5E5E5;
+    font-size: 14px;
+}
+
+.welcome-buttons {
+    margin-top: 25px;
+    display: flex;
+    gap: 12px;
+}
+
+.welcome-buttons button {
+    padding: 11px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#exploreBtn {
+    border: none;
+    background: #D4AF37;
+    color: #1A362D;
+}
+
+#tripsBtn {
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+}
+
+.trips h2,
+.saved h2 {
+    font-family: Georgia, serif;
+    color: #1A362D;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.trip-cards {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 55px;
+}
+
+.trip-card {
+    flex: 1;
+    display: flex;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+}
+
+.trip-card img {
+    width: 180px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.trip-card div {
+    padding: 25px;
+}
+
+.trip-card h3 {
+    font-family: Georgia, serif;
+    color: #1A362D;
+    margin-bottom: 8px;
+}
+
+.trip-card p {
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.trip-card span {
+    color: #A77D32;
+    font-size: 12px;
+}
+
+.saved-cards {
+    display: flex;
+    gap: 25px;
+}
+
+.saved-cards > div {
+    flex: 1;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+}
+
+.saved-cards img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.saved-cards h3 {
+    font-family: Georgia, serif;
+    color: #1A362D;
+    margin: 12px 15px 5px;
+}
+
+.saved-cards p {
+    color: #777;
+    font-size: 13px;
+    margin: 0 15px 18px;
+}
+
+@media (max-width: 768px) {
+
+    .dashboard-header {
+        padding: 18px 20px;
+    }
+
+    .dashboard-header nav {
+        gap: 10px;
+    }
+
+    .dashboard-header nav a {
+        display: none;
+    }
+
+    main {
+        padding: 30px 15px;
+    }
+
+    .welcome {
+        padding: 35px 25px;
+    }
+
+    .welcome h1 {
+        font-size: 30px;
+    }
+
+    .welcome-buttons {
+        flex-direction: column;
+    }
+
+    .trip-cards,
+    .saved-cards {
+        flex-direction: column;
+    }
+
+    .trip-card img {
+        width: 130px;
+    }
+}

@@ -264,7 +264,7 @@ h3 {
     border-radius: 20px;
 
     background: white;
-    color:
+   color: #1A362D;
 
     font-size: 11px;
     font-weight: bold;
@@ -323,9 +323,9 @@ h3 {
 }
 
 .why h2 {
-    color: #1A362D
-    font-size: 36px;
-    margin-bottom: 55px;
+    color: #1A362D;
+font-size: 36px;
+    margin-bottom: 12px;
 }
 
 .features {
