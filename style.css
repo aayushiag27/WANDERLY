@@ -714,3 +714,15 @@ font-size: 36px;
     background: #D4AF37;
     color: white;
 }
+#destinationInput {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin-top: 5px;
+    width: 150px;
+}
+
+#destinationInput::placeholder {
+    color: #777;
+}

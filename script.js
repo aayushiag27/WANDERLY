@@ -26,24 +26,41 @@ subscribe.addEventListener("click", function () {
 });
 
 
-const searchBtn = document.querySelector("#searchBtn");
+const searchBtn = document.getElementById("searchBtn");
+const searchInput = document.getElementById("destinationInput");
 
 searchBtn.addEventListener("click", function () {
-    alert("Search button clicked!");
-});
 
+    const searchText = searchInput.value.toLowerCase().trim();
+    const cards = document.querySelectorAll(".card");
 
-const cards = document.querySelectorAll(".card");
+    if (searchText === "") {
 
-cards.forEach(function (card) {
+        cards.forEach(function (card) {
+            card.style.display = "block";
+        });
 
-    card.addEventListener("click", function () {
+        return;
+    }
 
-        const place = card.querySelector("h3").textContent;
+    let found = false;
 
-        alert("You selected " + place);
+    cards.forEach(function (card) {
+
+        const destination = card.querySelector("h3").textContent.toLowerCase();
+
+        if (destination.includes(searchText)) {
+            card.style.display = "block";
+            found = true;
+        } else {
+            card.style.display = "none";
+        }
 
     });
+
+    if (!found) {
+        alert("Destination not found.");
+    }
 
 });
 
