@@ -687,3 +687,30 @@ font-size: 36px;
     background-color: #1A362D;
     border-radius: 10px;
 }
+.card {
+    position: relative;
+}
+
+.card .save-btn {
+    position: absolute;
+    top: 190px;
+    right: 15px;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    color: #1A362D;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.card .save-btn:hover {
+    background: #D4AF37;
+    color: white;
+}
+
+.card .save-btn.saved {
+    background: #D4AF37;
+    color: white;
+}

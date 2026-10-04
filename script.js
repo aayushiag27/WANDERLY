@@ -133,3 +133,38 @@ topBtn.addEventListener("click", function () {
     });
 
 });
+const saveButtons = document.querySelectorAll(".save-btn");
+
+saveButtons.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+        const destination = button.dataset.name;
+
+        let savedDestinations = JSON.parse(
+            localStorage.getItem("savedDestinations")
+        ) || [];
+
+        if (savedDestinations.includes(destination)) {
+
+            savedDestinations = savedDestinations.filter(function (item) {
+                return item !== destination;
+            });
+
+            button.textContent = "♡";
+            button.classList.remove("saved");
+
+        } else {
+
+            savedDestinations.push(destination);
+
+            button.textContent = "♥";
+            button.classList.add("saved");
+        }
+
+        localStorage.setItem(
+            "savedDestinations",
+            JSON.stringify(savedDestinations)
+        );
+    });
+});
