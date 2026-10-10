@@ -1,187 +1,184 @@
 const hamburger = document.querySelector(".hamburger");
 const mobileMenu = document.querySelector(".mobile-menu");
-const close = document.querySelector(".close");
-
-hamburger.addEventListener("click", function () {
-    mobileMenu.classList.add("active");
-});
-
-close.addEventListener("click", function () {
-    mobileMenu.classList.remove("active");
-});
-
-
+const closeMenu = document.querySelector(".mobile-menu .close");
+if (hamburger && mobileMenu) {
+    hamburger.addEventListener("click", function () {
+        mobileMenu.classList.add("active");
+    });
+}
+if (closeMenu && mobileMenu) {
+    closeMenu.addEventListener("click", function () {
+        mobileMenu.classList.remove("active");
+    });
+}
+if (mobileMenu) {
+    mobileMenu.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            mobileMenu.classList.remove("active");
+        });
+    });
+}
 const subscribe = document.querySelector("#subscribe");
 const email = document.querySelector("#email");
 const message = document.querySelector("#message");
+if (subscribe && email && message) {
+    subscribe.addEventListener("click", function () {
+        const emailValue = email.value.trim();
 
-subscribe.addEventListener("click", function () {
+        if (emailValue.includes("@") && emailValue.includes(".")) {
+            message.textContent = "Successfully subscribed!";
+        } else {
+            message.textContent = "Please enter a valid email!";
+        }
+    });
+}
+const searchBtn = document.getElementById("searchBtn");
+const searchInput = document.getElementById("destinationInput");
+const cards = document.querySelectorAll(".destination-cards .card");
+const viewAll = document.querySelector(".view-all");
+if (searchBtn && searchInput) {
+    searchBtn.addEventListener("click", function () {
+        const searchText = searchInput.value.toLowerCase().trim();
+        let found = false;
 
-    if (email.value.includes("@")) {
-        message.textContent = "Successfully subscribed!";
-    } else {
-        message.textContent = "Please enter a valid email!";
-    }
+        cards.forEach(function (card) {
+            const heading = card.querySelector("h3");
 
+            if (!heading) {
+                return;
+            }
+
+            const destination = heading.textContent.toLowerCase();
+
+            if (searchText === "" || destination.includes(searchText)) {
+                card.style.display = "";
+                found = true;
+            } else {
+                card.style.display = "none";
+            }
+        });
+
+        if (searchText !== "" && !found) {
+            alert("Destination not found.");
+        }
+    });
+
+
+    searchInput.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            searchBtn.click();
+        }
+    });
+}
+if (viewAll) {
+    viewAll.addEventListener("click", function () {
+        cards.forEach(function (card) {
+            card.style.display = "";
+        });
+
+        if (searchInput) {
+            searchInput.value = "";
+        }
+
+        viewAll.textContent = "All destinations shown";
+    });
+}
+const searchIcon = document.querySelector(".search-icon");
+const searchBox = document.querySelector(".search-box");
+
+if (searchIcon && searchBox) {
+    searchIcon.addEventListener("click", function () {
+        searchBox.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+        if (searchInput) {
+            searchInput.focus();
+        }
+    });
+}
+
+
+document.querySelectorAll(".offer-text button").forEach(function (button) {
+    button.addEventListener("click", function () {
+        alert("Explore our latest travel offers!");
+    });
 });
 
 
-const searchBtn = document.getElementById("searchBtn");
-const searchInput = document.getElementById("destinationInput");
-
-searchBtn.addEventListener("click", function () {
-
-    const searchText = searchInput.value.toLowerCase().trim();
-    const cards = document.querySelectorAll(".card");
-
-    if (searchText === "") {
-
-        cards.forEach(function (card) {
-            card.style.display = "block";
+document.querySelectorAll(".nav-right a").forEach(function (link) {
+    if (link.textContent.toLowerCase().includes("list your property")) {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            alert("Property listing feature coming soon!");
         });
+    }
+});
 
+
+document.querySelectorAll(".save-btn").forEach(function (button) {
+    const card = button.closest(".card");
+    const heading = card ? card.querySelector("h3") : null;
+
+    if (!heading) {
         return;
     }
 
-    let found = false;
+    const destinationName = heading.textContent.trim();
 
-    cards.forEach(function (card) {
+    let savedDestinations = JSON.parse(
+        localStorage.getItem("savedDestinations") || "[]"
+    );
 
-        const destination = card.querySelector("h3").textContent.toLowerCase();
-
-        if (destination.includes(searchText)) {
-            card.style.display = "block";
-            found = true;
-        } else {
-            card.style.display = "none";
-        }
-
-    });
-
-    if (!found) {
-        alert("Destination not found.");
+   
+    if (savedDestinations.includes(destinationName)) {
+        button.classList.add("saved");
+        button.textContent = "♥";
     }
 
-});
-
-
-const viewAll = document.querySelector(".view-all");
-
-viewAll.addEventListener("click", function () {
-
-    cards.forEach(function (card) {
-        card.style.display = "block";
-    });
-
-    viewAll.textContent = "All destinations shown";
-
-});
-
-
-const offerButtons = document.querySelectorAll(".offer-text button");
-
-offerButtons.forEach(function (button) {
-
     button.addEventListener("click", function () {
+        let saved = JSON.parse(
+            localStorage.getItem("savedDestinations") || "[]"
+        );
 
-        alert("Explore Collection clicked!");
-
-    });
-
-});
-
-
-
-
-
-const property = document.querySelector(".nav-right a");
-
-property.addEventListener("click", function (event) {
-
-    event.preventDefault();
-
-    alert("List your property clicked!");
-
-});
-
-
-const searchIcon = document.querySelector(".search-icon");
-
-searchIcon.addEventListener("click", function () {
-
-    document.querySelector(".search-box").scrollIntoView({
-        behavior: "smooth"
-    });
-
-});
-
-
-const mobileLinks = document.querySelectorAll(".mobile-menu a");
-
-mobileLinks.forEach(function (link) {
-
-    link.addEventListener("click", function () {
-
-        mobileMenu.classList.remove("active");
-
-    });
-
-});
-
-
-const topBtn = document.querySelector("#topBtn");
-
-window.addEventListener("scroll", function () {
-
-    if (window.scrollY > 300) {
-        topBtn.style.display = "block";
-    } else {
-        topBtn.style.display = "none";
-    }
-
-});
-
-
-topBtn.addEventListener("click", function () {
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
-});
-const saveButtons = document.querySelectorAll(".save-btn");
-
-saveButtons.forEach(function (button) {
-
-    button.addEventListener("click", function () {
-
-        const destination = button.dataset.name;
-
-        let savedDestinations = JSON.parse(
-            localStorage.getItem("savedDestinations")
-        ) || [];
-
-        if (savedDestinations.includes(destination)) {
-
-            savedDestinations = savedDestinations.filter(function (item) {
-                return item !== destination;
+        if (saved.includes(destinationName)) {
+            saved = saved.filter(function (name) {
+                return name !== destinationName;
             });
 
-            button.textContent = "♡";
             button.classList.remove("saved");
-
+            button.textContent = "♡";
         } else {
+            saved.push(destinationName);
 
-            savedDestinations.push(destination);
-
-            button.textContent = "♥";
             button.classList.add("saved");
+            button.textContent = "♥";
         }
 
         localStorage.setItem(
             "savedDestinations",
-            JSON.stringify(savedDestinations)
+            JSON.stringify(saved)
         );
     });
 });
+
+
+const topBtn = document.getElementById("topBtn");
+
+if (topBtn) {
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
+    });
+
+    topBtn.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
