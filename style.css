@@ -3,19 +3,39 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 20px;
 }
+
 body {
     font-family: Arial, sans-serif;
     color: #2D3748;
     background: white;
     overflow-x: hidden;
 }
+
 h1, h2, h3 {
     font-family: Georgia, serif;
 }
+
+img {
+    max-width: 100%;
+}
+
+button,
+input {
+    font-family: Arial, sans-serif;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid #A77D32;
+    outline-offset: 3px;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -26,6 +46,7 @@ h1, h2, h3 {
     position: relative;
     z-index: 100;
 }
+
 .logo {
     font-family: Georgia, serif;
     font-size: 28px;
@@ -34,31 +55,35 @@ h1, h2, h3 {
     text-decoration: none;
     white-space: nowrap;
 }
+
 .nav-links {
     display: flex;
     gap: 40px;
     margin-left: 30px;
 }
-.nav-links a {
+
+.nav-links a,
+.nav-right a {
     color: #333;
     text-decoration: none;
     font-size: 14px;
 }
+
 .nav-links a:hover,
 .nav-right a:hover {
     color: #A77D32;
 }
+
 .nav-right {
     display: flex;
     align-items: center;
     gap: 20px;
 }
+
 .nav-right a {
-    color: #333;
-    text-decoration: none;
-    font-size: 14px;
     white-space: nowrap;
 }
+
 .nav-right button {
     padding: 9px 18px;
     border: none;
@@ -68,16 +93,19 @@ h1, h2, h3 {
     font-size: 12px;
     cursor: pointer;
 }
+
 .search-icon {
     display: flex;
     align-items: center;
     cursor: pointer;
 }
+
 .search-icon img {
     width: 22px;
     height: 22px;
     object-fit: contain;
 }
+
 .hamburger {
     display: none;
     border: none;
@@ -87,12 +115,13 @@ h1, h2, h3 {
     line-height: 1;
     cursor: pointer;
 }
+
 .mobile-menu {
     display: none;
     position: fixed;
     top: 0;
     right: 0;
-    width: 80%;
+    width: 85%;
     max-width: 320px;
     height: 100vh;
     padding: 80px 25px 30px;
@@ -103,18 +132,22 @@ h1, h2, h3 {
     gap: 25px;
     overflow-y: auto;
 }
+
 .mobile-menu.active {
     display: flex;
 }
+
 .mobile-menu a {
     color: #1A362D;
     font-size: 17px;
     text-decoration: none;
     padding: 5px 0;
 }
+
 .mobile-menu a:hover {
     color: #A77D32;
 }
+
 .mobile-menu .close {
     position: absolute;
     top: 22px;
@@ -123,6 +156,7 @@ h1, h2, h3 {
     font-size: 27px;
     cursor: pointer;
 }
+
 .hero {
     min-height: 470px;
     padding: 75px 20px 55px;
@@ -139,9 +173,11 @@ h1, h2, h3 {
     align-items: center;
     justify-content: center;
 }
+
 .hero-content {
     width: 100%;
 }
+
 .hero-content p:first-child {
     display: inline-block;
     padding: 6px 12px;
@@ -151,6 +187,7 @@ h1, h2, h3 {
     font-size: 12px;
     color: white;
 }
+
 .hero-content p img {
     width: 14px;
     height: 14px;
@@ -160,16 +197,19 @@ h1, h2, h3 {
     background: transparent;
     vertical-align: middle;
 }
+
 .hero h1 {
     font-size: 48px;
     margin-bottom: 12px;
     color: white;
 }
+
 .hero-content p:last-child {
     font-size: 14px;
     line-height: 1.6;
     color: white;
 }
+
 .search-box {
     max-width: 850px;
     width: 100%;
@@ -183,6 +223,7 @@ h1, h2, h3 {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
     scroll-margin-top: 20px;
 }
+
 .search-box > div {
     flex: 1;
     min-width: 0;
@@ -190,27 +231,32 @@ h1, h2, h3 {
     text-align: left;
     border-right: 1px solid #E5E7EB;
 }
+
 .search-box strong {
     display: block;
     font-size: 9px;
     color: #777777;
     margin-bottom: 4px;
 }
+
 .search-box div span {
     font-size: 13px;
     color: #333333;
 }
+
 .search-box > span {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 8px;
 }
+
 .search-box > span img {
     width: 20px;
     height: 20px;
     object-fit: contain;
 }
+
 .search-box button {
     padding: 13px 28px;
     border: none;
@@ -220,6 +266,7 @@ h1, h2, h3 {
     font-weight: bold;
     cursor: pointer;
 }
+
 .stats {
     display: flex;
     justify-content: space-around;
@@ -229,41 +276,49 @@ h1, h2, h3 {
     background: #F9F8F6;
     text-align: center;
 }
+
 .stats h3 {
     color: #1A362D;
     font-size: 24px;
     margin-bottom: 2px;
 }
+
 .stats p {
     color: #666666;
     font-size: 12px;
 }
+
 .destinations {
     max-width: 1200px;
     margin: auto;
     padding: 65px 20px;
     scroll-margin-top: 20px;
 }
+
 .destinations > h2 {
     color: #1A362D;
     font-size: 34px;
     margin-bottom: 8px;
 }
+
 .destinations > p {
     color: #777777;
     font-size: 14px;
     line-height: 1.5;
     margin-bottom: 35px;
 }
+
 .destination-cards {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
 }
+
 .destination-cards span {
     border-radius: 5px;
     color: #D4AF37;
 }
+
 .card {
     position: relative;
     background: white;
@@ -273,16 +328,19 @@ h1, h2, h3 {
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
 }
+
 .card img {
     display: block;
     width: 100%;
     height: 220px;
     object-fit: cover;
 }
+
 .rating {
     position: absolute;
     top: 14px;
@@ -295,21 +353,25 @@ h1, h2, h3 {
     font-weight: bold;
     z-index: 2;
 }
+
 .card h3 {
     color: #1A362D;
     font-size: 21px;
     margin: 12px 18px 5px;
 }
+
 .card h4 {
     color: #1A362D;
     font-size: 14px;
     margin: 5px 18px;
 }
+
 .card p {
     color: #777777;
     font-size: 13px;
     margin: 5px 18px;
 }
+
 .card > span:last-child {
     display: block;
     color: #666666;
@@ -317,6 +379,7 @@ h1, h2, h3 {
     line-height: 1.5;
     margin: 12px 18px 20px;
 }
+
 .card .save-btn {
     position: absolute;
     top: 190px;
@@ -331,11 +394,13 @@ h1, h2, h3 {
     cursor: pointer;
     z-index: 3;
 }
+
 .card .save-btn:hover,
 .card .save-btn.saved {
     background: #D4AF37;
     color: white;
 }
+
 #destinationInput {
     width: 100%;
     max-width: 180px;
@@ -343,11 +408,12 @@ h1, h2, h3 {
     border: none;
     outline: none;
     font-size: 14px;
-    font-family: Arial, sans-serif;
 }
+
 #destinationInput::placeholder {
     color: #777;
 }
+
 .view-all {
     display: block;
     margin: 35px auto 0;
@@ -361,26 +427,31 @@ h1, h2, h3 {
     font-weight: bold;
     transition: 0.3s;
 }
+
 .view-all:hover {
     background: #C5A059;
     color: white;
 }
+
 .why {
     padding: 75px 20px;
     text-align: center;
     background: #FAF8F2;
 }
+
 .why h2 {
     color: #1A362D;
     font-size: 36px;
     margin-bottom: 12px;
 }
+
 .features {
     display: flex;
     justify-content: center;
     gap: 30px;
     margin-top: 30px;
 }
+
 .features > div {
     width: 300px;
     padding: 35px 30px;
@@ -392,6 +463,7 @@ h1, h2, h3 {
     align-items: center;
     justify-content: center;
 }
+
 .features span {
     display: flex;
     align-items: center;
@@ -404,16 +476,19 @@ h1, h2, h3 {
     color: #1A362D;
     font-size: 30px;
 }
+
 .features h3 {
     color: #1A362D;
     font-size: 19px;
     margin-bottom: 10px;
 }
+
 .features p {
     color: #666666;
     font-size: 14px;
     line-height: 1.6;
 }
+
 .offers {
     max-width: 1200px;
     margin: auto;
@@ -422,6 +497,7 @@ h1, h2, h3 {
     gap: 22px;
     scroll-margin-top: 20px;
 }
+
 .offer-card {
     flex: 1;
     min-width: 0;
@@ -430,11 +506,13 @@ h1, h2, h3 {
     border-radius: 10px;
     overflow: hidden;
 }
+
 .offer-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .offer-text {
     position: absolute;
     left: 0;
@@ -446,11 +524,13 @@ h1, h2, h3 {
         rgba(15, 55, 45, 0.8)
     );
 }
+
 .offer-text h2 {
     color: white;
     font-size: 22px;
     margin-bottom: 14px;
 }
+
 .offer-text button {
     padding: 7px 18px;
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -460,21 +540,25 @@ h1, h2, h3 {
     font-size: 11px;
     cursor: pointer;
 }
+
 .testimonials {
     padding: 65px 20px;
     text-align: center;
     background: #EAE8DF;
 }
+
 .testimonials h2 {
     color: #1A362D;
     font-size: 30px;
     margin-bottom: 35px;
 }
+
 .reviews {
     display: flex;
     justify-content: center;
     gap: 24px;
 }
+
 .review {
     flex: 1;
     max-width: 370px;
@@ -483,12 +567,14 @@ h1, h2, h3 {
     border-radius: 10px;
     text-align: left;
 }
+
 .review .stars {
     display: block;
     color: #D4AF37;
     font-size: 13px;
     margin-bottom: 18px;
 }
+
 .review > p {
     color: #555;
     font-size: 13px;
@@ -496,14 +582,17 @@ h1, h2, h3 {
     line-height: 1.5;
     margin-bottom: 20px;
 }
+
 .review .user {
     display: flex;
     align-items: center;
     gap: 12px;
 }
+
 .review .user > span {
     width: 38px;
     height: 38px;
+    flex-shrink: 0;
     border-radius: 50%;
     background: #E8EDE9;
     display: flex;
@@ -512,32 +601,38 @@ h1, h2, h3 {
     color: #1A362D;
     font-weight: bold;
 }
+
 .review .user h3 {
     color: #1A362D;
     font-size: 13px;
     margin-bottom: 3px;
 }
+
 .review .user small {
     color: #777;
     font-size: 10px;
 }
+
 .newsletter {
     padding: 75px 20px;
     text-align: center;
     background: #173D32;
     color: white;
 }
+
 .newsletter h2 {
     font-size: 32px;
     margin-bottom: 15px;
     color: white;
 }
+
 .newsletter > p {
     font-size: 14px;
     line-height: 1.5;
     margin-bottom: 28px;
     color: #E5E5E5;
 }
+
 .newsletter input {
     width: 350px;
     max-width: 100%;
@@ -547,6 +642,7 @@ h1, h2, h3 {
     font-size: 13px;
     outline: none;
 }
+
 .newsletter button {
     padding: 14px 28px;
     margin-left: 8px;
@@ -557,14 +653,17 @@ h1, h2, h3 {
     font-weight: bold;
     cursor: pointer;
 }
+
 #message {
     margin-top: 12px;
 }
+
 .footer {
     padding: 60px 80px 30px;
     background: white;
     border-top: 1px solid #EEEEEE;
 }
+
 .footer-content {
     max-width: 1200px;
     margin: auto;
@@ -572,26 +671,32 @@ h1, h2, h3 {
     justify-content: space-between;
     gap: 40px;
 }
+
 .footer-brand {
     max-width: 260px;
 }
+
 .footer-brand h2 {
     color: #1A362D;
 }
+
 .footer-brand p {
     color: #666666;
     font-size: 14px;
     line-height: 1.6;
     margin-top: 12px;
 }
+
 .footer-links {
     display: flex;
     gap: 70px;
 }
+
 .footer-links h4 {
     color: #1A362D;
     margin-bottom: 15px;
 }
+
 .footer-links a {
     display: block;
     color: #666666;
@@ -599,9 +704,11 @@ h1, h2, h3 {
     font-size: 14px;
     margin-bottom: 10px;
 }
+
 .footer-links a:hover {
     color: #A77D32;
 }
+
 .footer-bottom {
     margin-top: 40px;
     padding-top: 20px;
@@ -610,13 +717,15 @@ h1, h2, h3 {
     color: #888888;
     font-size: 13px;
 }
+
 .app-buttons {
     display: flex;
     gap: 12px;
-    color: #FFFFFF;
+    color: white;
     background-color: #1A362D;
     border-radius: 10px;
 }
+
 #topBtn {
     display: none;
     position: fixed;
@@ -632,202 +741,313 @@ h1, h2, h3 {
     cursor: pointer;
     z-index: 90;
 }
+
 @media (max-width: 900px) {
     .navbar {
-        padding: 16px 25px;
+        padding: 16px 22px;
     }
-.nav-links {
-        gap: 18px;
+
+    .nav-links {
+        gap: 16px;
         margin-left: 10px;
     }
-        .nav-right {
-        gap: 12px;
+
+    .nav-right {
+        gap: 10px;
     }
+
     .destination-cards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
     .features {
+        flex-wrap: wrap;
         gap: 18px;
     }
+
     .features > div {
-        width: 32%;
+        width: calc(50% - 15px);
         padding: 28px 18px;
     }
+
     .footer {
         padding: 50px 30px 25px;
     }
+
     .footer-links {
-        gap: 35px;
+        gap: 25px;
     }
 }
+
 @media (max-width: 768px) {
     .navbar {
-        padding: 15px 20px;
+        padding: 15px 18px;
     }
+
     .logo {
-        font-size: 25px;
+        font-size: 24px;
     }
+
     .nav-links,
     .nav-right {
         display: none;
     }
+
     .hamburger {
         display: block;
+        padding: 4px;
     }
+
+    .mobile-menu {
+        width: 85%;
+        max-width: 320px;
+    }
+
     .hero {
-        min-height: auto;
-        padding: 48px 16px 30px;
+        min-height: 0;
+        padding: 55px 18px 35px;
         background-position: center;
     }
+
     .hero-content p:first-child {
         margin-bottom: 14px;
     }
+
     .hero h1 {
-        font-size: 34px;
-        line-height: 1.15;
+        font-size: clamp(30px, 7vw, 38px);
+        line-height: 1.2;
     }
+
     .hero-content p:last-child {
         max-width: 420px;
         margin: 0 auto;
         font-size: 13px;
         line-height: 1.6;
     }
+
     .search-box {
-        margin-top: 22px;
-        padding: 15px;
+        margin-top: 25px;
+        padding: 14px;
         flex-direction: column;
         align-items: stretch;
         border-radius: 18px;
         gap: 0;
     }
+
     .search-box > div {
         width: 100%;
         padding: 12px 8px;
         border-right: none;
         border-bottom: 1px solid #EEEEEE;
     }
+
     .search-box > span {
         display: none;
     }
+
+    #destinationInput {
+        max-width: 100%;
+    }
+
     .search-box button {
         width: 100%;
         margin-top: 12px;
     }
+
     .stats {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 22px 35px;
-        padding: 22px 15px;
+        gap: 25px 12px;
+        padding: 25px 12px;
     }
+
     .stats > div {
-        width: calc(50% - 25px);
+        width: calc(50% - 12px);
     }
+
     .stats h3 {
         font-size: 22px;
     }
-    .destinations {
-        padding: 38px 18px 45px;
+
+    .stats p {
+        font-size: 11px;
     }
+
+    .destinations {
+        padding: 42px 18px;
+    }
+
     .destinations > h2 {
         font-size: 29px;
     }
-        .destinations > p {
-        margin-bottom: 22px;
+
+    .destinations > p {
+        margin-bottom: 24px;
     }
-.destination-cards {
+
+    .destination-cards {
         grid-template-columns: 1fr;
         gap: 20px;
     }
+
     .card img {
         height: 230px;
     }
+
     .card .save-btn {
         top: 190px;
     }
+
     .why {
         padding: 50px 18px;
     }
+
     .why h2 {
         font-size: 29px;
     }
-    .features,
-    .offers,
-    .reviews {
+
+    .features {
         flex-direction: column;
         align-items: center;
-    }
-    .features {
+        gap: 18px;
         margin-top: 24px;
     }
-        .features > div {
+
+    .features > div {
         width: 100%;
-        max-width: 380px;
+        max-width: 400px;
+        padding: 28px 22px;
     }
-.offers {
+
+    .offers {
         padding: 40px 18px;
+        flex-direction: column;
         gap: 18px;
     }
+
     .offer-card {
         width: 100%;
-        flex: auto;
+        flex: none;
         height: 250px;
     }
+
     .testimonials {
         padding: 45px 18px;
     }
+
     .testimonials h2 {
         font-size: 27px;
     }
+
     .reviews {
+        flex-direction: column;
+        align-items: center;
         gap: 18px;
     }
+
     .review {
         width: 100%;
         max-width: 420px;
     }
+
     .newsletter {
         padding: 50px 20px;
     }
+
     .newsletter h2 {
         font-size: 27px;
     }
+
     .newsletter input {
         width: 100%;
-        margin-bottom: 10px;
+        margin: 0 0 12px;
     }
+
     .newsletter button {
         width: 100%;
-        margin-left: 0;
+        margin: 0;
     }
+
     .footer {
         padding: 40px 22px 20px;
     }
-        .footer-content {
+
+    .footer-content {
         flex-direction: column;
         gap: 30px;
     }
-.footer-links {
+
+    .footer-brand {
+        max-width: 100%;
+    }
+
+    .footer-links {
         flex-wrap: wrap;
         gap: 25px 35px;
     }
+
     .app-buttons {
         flex-wrap: wrap;
     }
 }
+
 @media (max-width: 380px) {
+    .navbar {
+        padding: 14px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .hero {
+        padding: 42px 14px 28px;
+    }
+
     .hero h1 {
-        font-size: 30px;
+        font-size: 29px;
     }
+
     .stats {
-        gap: 18px 12px;
+        gap: 20px 8px;
     }
+
     .stats > div {
-        width: calc(50% - 10px);
+        width: calc(50% - 8px);
     }
+
     .destinations > h2 {
-        font-size: 26px;
+        font-size: 25px;
     }
+
+    .card img {
+        height: 200px;
+    }
+
+    .card .save-btn {
+        top: 160px;
+    }
+
     .footer-links {
-        gap: 25px;
+        gap: 22px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+@media (max-width: 768px) {
+    .search-box > span {
+        display: none;
     }
 }
